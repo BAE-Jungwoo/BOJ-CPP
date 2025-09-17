@@ -12,11 +12,12 @@ int main() {
 
 	for (int i = 0; i < L; i++) {
 		int val = S[i] - 'a' + 1; // a를 1으로 맞춤
-		sum += (val * (power % M)) % M; // 해시 함수
+		sum += (val * power) % M; // 해시 함수
 		power = (power * r) % M; // r의 i제곱
 	}
 	sum %= M; 
 
 	cout << sum << endl;
 	return 0;
+
 }

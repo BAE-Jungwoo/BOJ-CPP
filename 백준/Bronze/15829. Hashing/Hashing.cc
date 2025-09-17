@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
 	int r = 31, L;
-	long long sum = 0, M = 1234567891, power = 1; // 해시 값
+	long long sum = 0, M = 1234567891, power = 1;
 	cin >> L;
 
-	string S; // 문자열
+	string S; 
 	cin >> S;
 
 	for (int i = 0; i < L; i++) {
@@ -21,3 +21,4 @@ int main() {
 	return 0;
 
 }
+

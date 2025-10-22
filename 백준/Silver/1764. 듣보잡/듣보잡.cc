@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <map>
+#include <set>
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -11,32 +11,25 @@ int main() {
 
 	int N, M; // 듣도 못한 수, 보도 못한 수
 	cin >> N >> M;
-	map<string, int> mp;
+	set<string> s;
 	vector<string> v;
-	int cnt = 0;
 
 	while (N--) {
 		string name1;
 		cin >> name1;
-		mp.insert(make_pair(name1, 1));
+		s.insert(name1);
 	}
 	
-
 	while (M--) {
 		string name2;
 		cin >> name2;
-		if (mp.find(name2) != mp.end()) { // 이름이 존재
-			cnt++;
-			mp[name2]++;
+		if (s.find(name2) != s.end()) { // 이름이 존재
 			v.push_back(name2);
-		}
-		else {
-			mp.insert(make_pair(name2, 1));
 		}
 	}
 	sort(v.begin(), v.end());
 
-	cout << cnt << "\n";
+	cout << v.size() << "\n";
 	for (int i = 0; i < v.size(); i++) {
 		cout << v[i] << "\n";
 	}

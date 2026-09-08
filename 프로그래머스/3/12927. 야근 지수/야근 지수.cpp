@@ -17,7 +17,7 @@ long long solution(int n, vector<int> works) {
 	}
 
 	while(!pq.empty()) {
-		answer += 1LL * (pq.top() * pq.top());
+		answer += 1LL * pq.top() * pq.top();
 		pq.pop();
 	}
 	return answer;
